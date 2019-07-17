@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/WhiteSmoke"
+    >
+
+    <android.support.v4.widget.NestedScrollView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="50dp"
+            >
+
+            <EditText
+                android:id="@+id/et_idiom"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/btn_search"
+                app:layout_constraintBottom_toTopOf="@id/cardview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:maxLength="8"
+                android:background="@drawable/shape_round_border"
+                android:textSize="@dimen/sp_14"
+                android:hint="请输入要查询的成语"
+                />
+
+            <Button
+                android:id="@+id/btn_search"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/cardview"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/shape_round_button_small"
+                android:text="查询"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18"
+                />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardview"
+                app:layout_constraintTop_toBottomOf="@id/et_idiom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:paddingBottom="5dp"
+                >
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/odiom"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/sp_20"
+                        android:textColor="@color/black"
+                        tools:text="亡羊补牢"
+                        />
+
+                    <TextView
+                        android:id="@+id/pinyin"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:paddingRight="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBaseline_toBaselineOf="@id/odiom"
+                        android:layout_marginLeft="40dp"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/dimGray"
+                        tools:text="wáng yáng bǔ láo"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_chengyujs"
+                        app:layout_constraintTop_toBottomOf="@id/odiom"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/black"
+                        android:text="含义"
+                        />
+
+                    <TextView
+                        android:id="@+id/chengyujs"
+                        app:layout_constraintTop_toBottomOf="@id/odiom"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/tv_chengyujs"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/dimGray"
+                        tools:text="亡：逃亡，丢失；牢：关牲口的圈。羊逃跑了再去修补羊圈，还不算晚。比喻出了问题以后想办法补救，可以防止继续受损失。"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_from"
+                        app:layout_constraintTop_toBottomOf="@id/chengyujs"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/black"
+                        android:text="出处"
+                        />
+
+                    <TextView
+                        android:id="@+id/from"
+                        app:layout_constraintTop_toBottomOf="@id/chengyujs"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/tv_from"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/dimGray"
+                        tools:text="亡：逃亡，丢失；牢：关牲口的圈。羊逃跑了再去修补羊圈，还不算晚。比喻出了问题以后想办法补救，可以防止继续受损失。"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_example"
+                        app:layout_constraintTop_toBottomOf="@id/from"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/black"
+                        android:text="例子"
+                        />
+
+                    <TextView
+                        android:id="@+id/example"
+                        app:layout_constraintTop_toBottomOf="@id/from"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/tv_example"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/dimGray"
+                        tools:text="张学良始则失地，今幸固守锦州，～，可称晚悟。 章炳麟《与孙思昉论时事书》二"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_yufa"
+                        app:layout_constraintTop_toBottomOf="@id/example"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/black"
+                        android:text="例子"
+                        />
+
+                    <TextView
+                        android:id="@+id/yufa"
+                        app:layout_constraintTop_toBottomOf="@id/example"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/tv_yufa"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/dimGray"
+                        tools:text="连动式；作主语、谓语、宾语；含贬义"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_yinzhengjs"
+                        app:layout_constraintTop_toBottomOf="@id/yufa"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/black"
+                        android:text="引证"
+                        />
+
+                    <TextView
+                        android:id="@+id/yinzhengjs"
+                        app:layout_constraintTop_toBottomOf="@id/yufa"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/tv_yinzhengjs"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:paddingBottom="20dp"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/dimGray"
+                        tools:text="《战国策·楚策四》：“见菟而顾犬，未为晚也；亡羊而补牢，未为迟也。”谓走失了羊，赶快修补羊圈，还不算晚。比喻失误后及时补救。 宋 陆游 《秋兴》诗：“惩羹吹虀岂其非，亡羊补牢理所宜。”中国近代史资料丛刊《辛亥革命·武昌起义清方档案·清吏条陈》：“以上所陈，皆今日维繫人心，亡羊补牢之计。"
+                        />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/cardview"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

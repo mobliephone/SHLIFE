@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="50dp"
+        android:textSize="@dimen/sp_22"
+        android:text="Welcome-、-"
+        />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            >
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/con_one"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_name"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="20dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/iv_user"
+                    />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/iv_name"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@null"
+                    android:textSize="@dimen/sp_14"
+                    android:inputType="phone"
+                    android:hint="请输入手机号"
+                    />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/view_one"
+                app:layout_constraintTop_toBottomOf="@id/con_one"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ECEBEB"
+                android:layout_marginTop="8dp"
+                />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/con_two"
+                app:layout_constraintTop_toBottomOf="@id/view_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_password"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="20dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/iv_password"
+                    />
+
+                <EditText
+                    android:id="@+id/et_password"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/iv_password"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@null"
+                    android:textSize="@dimen/sp_14"
+                    android:inputType="textPassword"
+                    android:hint="请输入密码"
+                    />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/view_two"
+                app:layout_constraintTop_toBottomOf="@id/con_two"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ECEBEB"
+                android:layout_marginTop="8dp"
+                />
+
+            <Button
+                android:id="@+id/btn_login"
+                app:layout_constraintTop_toBottomOf="@id/view_two"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="60dp"
+                android:background="@color/coral"
+                android:textColor="@color/white"
+                android:text="登陆"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    >
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/iv_photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textColor="@color/blackText"
+        tools:text="买车时注意这四种鸡肋配置绝对不要装！甭管销售怎么吹，直接拒绝"
+        />
+
+    <TextView
+        android:id="@+id/tv_author"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="100dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/sp_10"
+        android:textColor="@color/dimGray"
+        tools:text="中国网"
+        />
+
+    <TextView
+        android:id="@+id/iv_time"
+        app:layout_constraintRight_toLeftOf="@id/iv_photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="100dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="20dp"
+        android:textSize="@dimen/sp_10"
+        android:textColor="@color/dimGray"
+        tools:text="2019-06-26 21:19"
+        />
+
+    <ImageView
+        android:id="@+id/iv_photo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"
+        tools:src="@mipmap/ic_launcher"
+        />
+
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/iv_photo"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/Silver"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+
+
+</android.support.constraint.ConstraintLayout>
